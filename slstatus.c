@@ -45,6 +45,25 @@ usage(void)
 	die("usage: %s [-s]", argv0);
 }
 
+/* TODO Update volume and brightness on change
+static void setSigHandler(int signal, void (*handler)(int), int flags){
+	struct sigaction action;
+	action.sa_handler = handler;
+	sigemptyset(&action.sa_mask);
+	action.sa_flags = flags | SA_RESTART;
+	if (sigaction(signal, &action, NULL) != 0){
+        die("sigaction");
+	}
+}
+
+static volatile int usr1_evt = 0;
+void sig_usr1_handler(int sig)
+{
+    (void*) sig;
+    usr1_evt = 1;
+}
+*/
+
 int
 main(int argc, char *argv[])
 {

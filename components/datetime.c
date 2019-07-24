@@ -5,6 +5,20 @@
 #include "../util.h"
 
 const char *
+datetime(void)
+{
+    time_t timer;
+    struct tm* tm_info;
+
+    time(&timer);
+    tm_info = localtime(&timer);
+
+    strftime(buf, 25, " %d.%m.%Y %H:%M", tm_info);
+    return buf;
+}
+
+/*
+const char *
 datetime(const char *fmt)
 {
 	time_t t;
@@ -17,3 +31,5 @@ datetime(const char *fmt)
 
 	return buf;
 }
+*/
+
