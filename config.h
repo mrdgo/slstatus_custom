@@ -68,5 +68,6 @@ static const struct arg args[] = {
     { run_command,  " %s |",    "$HOME/dokumente/proj/slstatus/scripts/sound.sh" },
     { run_command,  " %s |",    "$HOME/dokumente/proj/slstatus/scripts/back.sh"},
     { run_command,  " %s |",    "$HOME/dokumente/proj/slstatus/scripts/slbat.sh"},
+    //{ run_command,  " %s |",    "/usr/bin/curl wttr.in/?format=3" }, // inefficient!!!
 	{ datetime,     " %s",      "%F %T" },
 };
